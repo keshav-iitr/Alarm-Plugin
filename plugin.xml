@@ -52,6 +52,6 @@
         <source-file src="src/android/AlarmBoot.java" target-dir="src/com/kk/alarmplugin" />      
         <source-file src="src/android/AlarmReceiver.java" target-dir="src/com/kk/alarmplugin" />  
         <source-file src="src/android/AlarmPopUp.java" target-dir="src/com/kk/alarmplugin" />  
- 		<source-file src="res/raw/tone3.mp3" target-dir="res/raw" />    
+ 		<source-file src="res/raw/tone3.mp3" target="res/raw/tone3.mp3"/>    
      </platform>          
 </plugin>
