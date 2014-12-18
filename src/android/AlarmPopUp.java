@@ -40,8 +40,8 @@ public class AlarmPopUp extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		super.onCreateDialog(id);
 		System.out.println("==================Inside POPUP dialog==============");
-		final MediaPlayer mp = MediaPlayer.create(this, R.raw.tone3 );
-	    if(mp !=null) {    
+		// final MediaPlayer mp = MediaPlayer.create(this, R.raw.tone3 );
+	   /* if(mp !=null) {    
 	        mp.setVolume(100, 100);
 	        mp.start();
 	        mp.setOnCompletionListener(new OnCompletionListener() {
@@ -51,7 +51,7 @@ public class AlarmPopUp extends Activity {
 	                mp.release();
 	            }
 	        });
-	    }
+	    }*/
 		// Build the dialog
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -62,7 +62,7 @@ public class AlarmPopUp extends Activity {
 		alert.setPositiveButton("Dismiss",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
-						 mp.release();
+					//	 mp.release();
 						AlarmPopUp.this.finish();
 					}
 				});
