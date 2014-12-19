@@ -30,7 +30,7 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity
-             android:name="com.uc.testalarm.AlarmPopUp"
+             android:name="com.kk.alarmplugin.AlarmPopUp"
              android:excludeFromRecents="true"
              android:label="TestAlarm"
              android:launchMode="singleInstance"
