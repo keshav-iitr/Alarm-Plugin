@@ -29,6 +29,15 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+             android:name="com.uc.testalarm.AlarmPopUp"
+             android:excludeFromRecents="true"
+             android:label="TestAlarm"
+             android:launchMode="singleInstance"
+             android:screenOrientation="portrait"
+             android:taskAffinity=""
+             android:theme="@android:style/Theme.Dialog" >
+            </activity>
             <receiver android:name="com.kk.alarmplugin.AlarmReceiver" android:process=":remote">
             </receiver>
             <receiver android:name="com.kk.alarmplugin.AlarmBoot">
