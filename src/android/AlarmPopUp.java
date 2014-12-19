@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 
 public class AlarmPopUp extends Activity {
 	// An ID of the alarm dialog
@@ -40,18 +43,10 @@ public class AlarmPopUp extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		super.onCreateDialog(id);
 		System.out.println("==================Inside POPUP dialog==============");
-		// final MediaPlayer mp = MediaPlayer.create(this, R.raw.tone3 );
-	   /* if(mp !=null) {    
-	        mp.setVolume(100, 100);
-	        mp.start();
-	        mp.setOnCompletionListener(new OnCompletionListener() {
-
-	            @Override
-	            public void onCompletion(MediaPlayer mp) {
-	                mp.release();
-	            }
-	        });
-	    }*/
+		Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+		final Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+		r.play();
+	 
 		// Build the dialog
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -63,6 +58,7 @@ public class AlarmPopUp extends Activity {
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
 					//	 mp.release();
+						r.stop();
 						AlarmPopUp.this.finish();
 					}
 				});
